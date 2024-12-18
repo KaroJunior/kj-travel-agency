@@ -1,0 +1,564 @@
+/*HEADER AND FOOTER STYLING START*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white; /* Change body background color to white */
+    color: #0a0a0a; /* Change text color to dark */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo styles */
+.logo-container {
+    display: inline-block;
+    margin-right: -5px; /* Adjust spacing between logo and name */
+    padding: 0; /* Adjust padding as needed */
+    width: 40px; /* Set width to ensure a perfect circle */
+    height: 40px; /* Set height to ensure a perfect circle */
+}
+
+.logo {
+    width: 100%; /* Ensure the logo fills the container */
+    height: 100%; /* Ensure the logo fills the container */
+    border-radius: 50%; /* Maintain circular shape */
+}
+
+/* Header styles */
+header {
+    background-color: white; /* Change header background color to white */
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Adjust the height of the line */
+    background-color: #0ad132; /* Green color for the line */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 25px;
+    color: #002496; /* Change header text color to blue */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #002496; /* Change nav links text color to dark */
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust the position of the underline */
+    left: 0;
+    width: 0;
+    height: 3px; /* Adjust the height of the underline */
+    background-color: #0ad132; /* Green color for the underline */
+    transition: width 0.3s; /* Add transition for smooth effect */
+}
+
+nav ul li a:hover {
+    color: #0ad132; /* Change text color on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+nav {
+    padding-left: 40px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0ad132; /* Default button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for background color and transform */
+}
+
+.btn:hover {
+    background-color: #0ad132; /* Change button color on hover */
+    transform: scale(1.1); /* Add scale effect on hover */
+}
+
+/* Additional styling for anchor tags */
+.btn:hover,
+.btn:active,
+.btn:focus {
+    outline: none; /* Remove outline on button focus */
+}
+/* Styles for mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none; /* Hide by default on larger screens */
+}
+.mobile-menu-toggle {
+    position: absolute;
+    top: 50%; /* Position it at the vertical center */
+    transform: translateY(-50%);
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+/* Logo and company name styles */
+.logo-container,
+h1 {
+    display: inline-block; /* Ensure they are in the same line */
+    vertical-align: middle; /* Align them vertically */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #0a0a0a;
+    margin: 6px 0;
+    transition: 0.4s; /* Add transition for smooth animation */
+}
+
+
+/* Change to "X" shape when menu is active */
+.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #0ad132;
+    margin: 5px 0;
+}
+
+/* Media query for desktop devices */
+@media (min-width: 769px) {
+    .mobile-btn {
+        display: none; /* Hide the button on mobile */
+    }
+}
+.mobile-menu-toggle {
+    /* Add this to prevent movement on click */
+    transition: none;
+}
+
+
+/* Footer styles */
+#footer {
+    background-color: #002496;
+    color: white;
+}
+
+.footer-columns {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-link {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.footer-column h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0ad132;
+}
+
+.footer-column h2 {
+    font-size: 2rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: white; /* Change navigation links color to white */
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #0ad132; /* Change navigation links color on hover */
+}
+
+.btn-footer {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0ad132;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-footer:hover {
+    background-color: #0ad132;
+    transform: scale(1.1);
+}
+
+.footer-logo {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.footer-bottom {
+    border-top: 1px solid white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+ 
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+.social-icons img {
+    width: 30px; /* Adjust the width of the icons */
+    height: 30px; /* Adjust the height of the icons */
+    margin: 0 10px; /* Optional: Adjust the margin between the icons */
+}
+.social-icons a {
+    display: inline-block;
+    margin: 0 5x;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Increase the scale of the icon on hover */
+}
+/*HEADER AND FOOTER STYLING END*/
+
+/*Hero Section Style*/
+#book-hero {
+    position: relative; /* Set position to relative */
+    background-image: url('assets/book.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0; /* Adjust padding as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#book-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 21, 94, 0.593); /* Adjust the alpha value to change the transparency */
+    z-index: 1; /* Position the overlay above the background image */
+}
+
+#book-hero .container {
+    position: relative; /* Set position to relative */
+    z-index: 2; /* Position the container above the overlay */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#book-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Book Appointment section */
+#book-appointment {
+    padding: 50px 0;
+}
+
+#book-appointment h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #002496;
+    font-size: 30px;
+}
+
+#book-appointment p {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+#book-appointment h3 {
+    margin-top: 30px;
+    color: #002496;
+    
+}
+
+/*Appointment Form section*/
+#book-appointment-form {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    margin-top: -60px;
+}
+
+.appointment-card {
+    background-color: #0ad132;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.appointment-card h2 {
+    color: #002496;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea,
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #002496;
+    color: #002496; 
+}
+
+.input-group {
+    display: flex;
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: space-between; /* Add space between the date and time inputs */
+}
+
+.date-group,
+.time-group {
+    flex: 1; /* Make both groups take up equal space */
+}
+
+.date-group input[type="date"],
+.time-group input[type="time"] {
+    width: calc(100% - 10px); /* Adjust width to fit the available space */
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #002496;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #002496;
+}
+/* Change the highlight color of the active form input */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #002496;
+}
+/* Change label color */
+label {
+    color: #002496; /* Change label color to white */
+}
+
+
+
+
+/*HEADER AND FOOTER MOBILE VIEW START*/
+/* Responsive styles for mobile*/
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        display: none; /* Hide the menu by default on smaller screens */
+    }
+
+    /* Show menu when toggle button is clicked */
+    .mobile-menu.active {
+        display: block;
+    }
+    .container h1 {
+        font-size: 18px;
+        position: absolute; /* Position the header absolutely */
+        top: 50%; /* Align vertically to the middle */
+        left: 50%; /* Align horizontally to the center */
+        transform: translate(-50%, -50%); /* Center the header */
+        width: 250px;
+    }
+
+    /* Adjust styles for the navigation menu */
+    nav.mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    nav.mobile-menu ul li {
+        margin: 10px 0;
+    }
+    /* Hide the desktop button on mobile view */
+    .desktop-btn {
+        display: none;
+    }
+        /* Mobile navigation menu */
+    .mobile-nav {
+        display: none; /* Hide by default */
+        padding: 20px;
+    }
+
+    /* Show the mobile navigation menu when active */
+    .active .mobile-nav {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+    }
+
+    /* Add custom styles for the "Book Appointment" button in mobile view */
+    .no-hover-animation:hover {
+        background-color: #0ad132; /* Change button background color on hover */
+        color: white; /* Change text color on hover */
+        transform: scale(1.1); /* Remove scale effect on hover */
+        border-radius: 5px; /* Optional: Add border radius on hover */
+    }
+    /* Remove underline effect for "Book Appointment" button */
+    .mobile-menu ul li:last-child a:hover::after {
+        width: 0; /* Set the width of the underline to 0 */
+    }
+}
+
+/* Add this media query for mobile view */
+@media only screen and (max-width: 767px) {
+    .footer-columns {
+        flex-direction: column; /* Change to a column layout for mobile */
+        align-items: center; /* Center align all items */
+    }
+
+    .footer-column {
+        width: 100%; /* Take full width of the container */
+        text-align: center; /* Center align text */
+        margin-bottom: 20px; /* Add some space between columns */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Change to a column layout for mobile */
+        text-align: center; /* Center align text */
+    }
+
+    .social-icons {
+        margin-top: 20px; /* Add some space between content and icons */
+    }
+
+    #book-appointment h2 {
+        font-size: 22px;
+    }
+}
+/*HEADER AND FOOTER MOBILE VIEW END*/

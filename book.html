@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/companylogo.png">
+    <title>Book Appointment - Karo Junior Consultancy</title>
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/company logo.png" alt="Logo" class="logo">
+            </div>
+            <h1>KARO JUNIOR CONSULTANCY</h1>
+            <div class="mobile-menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="country.html">Countries</a></li>
+                    <li><a href="#galleries">Gallery</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="book.html" class="btn mobile-btn no-hover-animation">Book Appointment</a></li>
+                </ul>
+            </nav>
+            <a href="book.html" class="btn desktop-btn">Book Appointment</a>
+        </div>
+    </header>
+
+    <section id="book-hero">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+        </div>
+    </section>
+
+    <section id="book-appointment">
+        <div class="container">
+            <h2>SCHEDULE YOUR CONSULTATION</h2>
+            <p>At Karo Junior Consultancy, we are dedicated to making your travel dreams a reality. Our experienced team is here to assist you every step of the way, from selecting the perfect destination to arranging all the necessary details for your journey.</p>
+            <p>When you book an appointment with us, you'll receive personalized guidance tailored to your specific needs and preferences. Whether you're planning a solo adventure, a family vacation, or a group trip, we're here to help you create unforgettable memories.</p>
+            <p>Please note that a consultation fee is required prior to booking your appointment. You can submit payment proof of the consultation fee using the form below. Rest assured that our consultants will address all your questions and concerns to ensure a smooth and stress-free travel experience.</p>
+            <h3>Consultation Fee Payment Details:</h3>
+            <p>Bank Name: Lorem Ipsum Bank</p>
+            <p>Account Number: 1234-5678-9012</p>
+            <p>Account Name: Karo Junior Consultancy</p>
+            <p>Amount: #500.00</p>
+        </div>
+    </section>
+
+    <section id="book-appointment-form">
+        <div class="container">
+            <div class="appointment-card">
+                <h2>APPOINTMENT DETAILS</h2>
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country interested in</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="France">France</option>
+                            <option value="Canada">Canada</option>
+                            <option value="UK">UK</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Malta">Malta</option>
+                            <option value="South Africa">South Africa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="package">Package applying for</label>
+                        <select id="package" name="package" required>
+                            <option value="">Select Package</option>
+                            <option value="Study Visa">Study Visa</option>
+                            <option value="Work Visa">Work Visa</option>
+                            <option value="Relocation Visa">Relocation Visa</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-proof">Payment proof for consultation fee</label>
+                        <input type="file" id="payment-proof" name="payment-proof" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group date-time-container">
+                        <div class="date-group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="time-group">
+                            <label for="time">Time:</label>
+                            <input type="time" id="time" name="time">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <img src="assets/company image.png" alt="Company Logo" class="footer-logo">
+                </div>
+                <div class="footer-column">
+                    <h2>READY TO START YOUR JOURNEY?</h2>
+                    <a href="book.html" class="btn-footer">Book Appointment</a>
+                </div>
+                <div class="footer-column">
+                    <h4>ADDRESS</h4>
+                    <p>123 Apt, Lorem Ipsum Road, off Loremsum Road, Lorem, Ipsum, Lorem Ipsum</p>
+                    <p>Phone: <a href="tel:+2347085858036" class="footer-link">+2347085858036</a>
+                    <p>Email: <a href="mailto:karojunior50@gmail.com" class="footer-link">karojunior50@gmail.com</a></p>
+                </div>
+                <div class="footer-column">
+                    <h4>NAVIGATION</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="country.html">Countries</a></li>
+                        <li><a href="#galleries">Gallery</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Karo Junior Consultancy</p>
+                <div class="social-icons">
+                    <a href=""><img src="assets/facebook.svg" alt="Facebook"></a>
+                    <a href=""><img src="assets/tiktok.svg" alt="Tiktok"></a>
+                    <a href=""><img src="assets/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
